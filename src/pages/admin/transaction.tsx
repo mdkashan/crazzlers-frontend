@@ -51,9 +51,7 @@ const Transaction = () => {
 
   const { user } = useSelector((state: {userReducer: UserReducerInitialState}) => state.userReducer );
   const {  data, isLoading, isError, error  } = useAllOrdersQuery(user?._id!)
-  console.log(data?.orders[0]);
   const [rows, setRows] = useState<DataType[]>([]);
-  console.log(err.data.message)
   if(isError) {
     const err = error as CustomError;
     toast.error(err.data.message);
