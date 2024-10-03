@@ -23,7 +23,8 @@ function Login() {
             photo:user.photoURL!,
             gender,
             dob:date,
-            _id:user.uid
+            _id:user.uid,
+            role:"user",
             })
             if("data" in res){
                 toast.success(`Welcome, ${user.displayName}`)
