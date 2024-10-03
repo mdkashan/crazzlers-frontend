@@ -24,7 +24,7 @@ function Login() {
             gender,
             dob:date,
             _id:user.uid,
-            role:"user",
+            role,
             })
             if("data" in res){
                 toast.success(`Welcome, ${user.displayName}`)
