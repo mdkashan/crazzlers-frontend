@@ -1,0 +1,53 @@
+.login {
+    height:90vh;
+    @include flex(column);
+    >main{
+        width:100%;
+        height: 80%;
+        max-width: 400px;
+
+        padding: 2rem;
+        box-shadow: 2px 5px 10px rgba(225, 130, 55, 0.9);
+        @include flex(column, center, stretch);
+        >div {
+            width: 100%;
+            @include flex(column, flex-start, stretch, 0.2rem);
+            > input, >select {
+                @include inputStyle;
+                border: 1px solid black;
+                border-radius:5px;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+            >p{
+                text-align: center;
+                margin: 2rem;
+            }
+            > button{
+                @include flex;
+                width: 70%;
+                margin: auto;
+                justify-content: center;
+                height:3rem;
+                background-color: rgb(62, 125, 242);
+                color: white;
+                border:1px solid rgb(62, 125, 242);
+                border-radius: 5px;
+                font-size: 1.6rem;
+                & :hover {
+                    cursor: pointer;
+                }
+                > svg {
+                    background-color: white;
+                    width: 30%;
+                    height: 100%;
+                }
+               > span {
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+                color: black;
+                }
+            }
+        }
+    }
+}

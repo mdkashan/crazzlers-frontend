@@ -1,0 +1,198 @@
+@media screen and (width<= 1200px) {
+  .home> main{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .productCard{
+    width: 15em;
+    padding: 0.4rem;
+  }
+
+  .admin-container {
+    overflow: auto;
+  }
+
+  .dashboard {
+    .widget-container,
+    .graph-container,
+    .transaction-container {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .graph-container {
+      padding: 2rem;
+    }
+    .transaction-container {
+      padding: 2rem;
+      height: unset;
+    }
+  }
+
+  .product-management {
+    padding: 2rem;
+  }
+}
+
+@media screen and (width<= 1100px) {
+  .home> main{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .productCard{
+    width: 12em;
+    padding: 0.4rem;
+  }
+
+  .admin-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (width<= 768px) {
+  .home> main{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .productCard{
+    width: 12em;
+    padding: 0.4rem;
+  }
+  .cart {
+    display: block;
+    padding: 2rem;
+
+    > main {
+      width: 100%;
+    }
+    > aside {
+      width: 100%;
+    }
+  }
+
+  .cartitem {
+    width: 100%;
+    > img {
+      width: 3rem;
+      height: 3rem;
+    }
+    > div {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .product-search-page {
+    display: block;
+    padding: 0;
+
+    > aside {
+      @include flex(row, space-between, center);
+      flex-wrap: wrap;
+      box-shadow: none;
+      > h2 {
+        @include heading;
+        font-size: 1.2rem;
+      }
+    }
+    > main > input {
+      width: 100%;
+      border: 1px solid rgba(212, 212, 212, 0.379);
+    }
+  }
+}
+
+@media screen and (width<= 600px) {
+
+  ::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounding the edges */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Handle color when hovered */
+  }
+  .scrollable-content {
+    scrollbar-width: thin; /* Make the scrollbar thinner */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color (first) and track color (second) */
+  }
+  .header{
+    > div > h1 {
+      display: none;
+    }
+    padding: 10rem;
+  }
+
+  .home> main{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .productCard{
+    width: 13em;
+    padding: 0.4rem;
+    > img {
+      width:11.7rem;
+    }
+  }
+  .product-search-page{
+    >aside{
+      padding: 2rem;
+      > h2{display: none;}
+      >div {
+        > input,>select {
+          border-radius: 10px;
+          margin: 0.1rem;
+        }
+      }
+    }
+  }
+  .search-product-list{
+    // background-color: red;
+    flex-wrap:wrap;
+     >.productCard{
+      width:12em;
+     }
+  }
+  .product-management {
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    padding: 0;
+    > section {
+      max-width: 400px;
+    }
+  }
+
+  .chart-container {
+    padding: 0;
+    > h1 {
+      margin: 0;
+      text-align: center;
+    }
+    > section {
+      margin: 8rem auto;
+    }
+  }
+
+  .dashboard-app-container > section {
+    .coupon-form,
+    .stopwatch {
+      display: flex;
+      flex-direction: column;
+    }
+    .stopwatch {
+      align-items: center;
+    }
+  }
+}

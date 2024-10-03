@@ -1,0 +1,82 @@
+.home{
+    padding: 1.5rem 2%;
+    display: flex;
+    flex-direction: column;
+    // height: calc(100vh - 4rem);
+    width: 100%;
+
+    > section {
+        width: 100%;
+        height: 18.75rem;
+        margin:auto;
+        background: url('https://img.freepik.com/free-vector/shopping-time-banner-with-realistic-map-cart-gift-bags-vector-illustration_548887-120.jpg') no-repeat center / cover;
+    }
+    .findmore{
+        font-size: 1.2rem;
+    }
+    >h1{
+        @include heading(1px);
+        margin-top: 3rem;
+        @include flex(row, space-between, center);
+    }
+     >main {
+        width: 100%;
+        display: flex;
+        flex:1;
+        gap: 1rem;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+     }
+}
+
+.productCard{
+    width: 15.75em;
+    // height: 25rem;
+    padding: 1rem;
+    flex: none;
+    @include flex(column, flex-start, center, 4px);   
+    position: relative;
+    > img {
+        @include square(calc(12.75rem - 3rem));
+        object-fit:cover;
+        margin: 1rem;
+    }
+    p{
+        font-weight: 700;
+    }
+    span {
+        font-weight: bolder;
+        font-size: 1.1rem;
+    }
+    > div {
+        position: absolute;
+        opacity: 0;
+        
+        @include square(100%);
+        top: 0;
+        left: 0;
+        background-color: rgba(84, 31, 31, 0.4);
+        &:hover{
+            opacity: 1;
+        }
+        @include flex;
+        button {
+            @include flex;
+            @include square(3rem);
+            border-radius:100%;
+            background-color: $darkBrown;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all .3s;
+            &:hover {
+                rotate: 90deg;
+            }
+
+        }
+
+    }
+}
