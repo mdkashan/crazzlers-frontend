@@ -21,10 +21,10 @@ function Login() {
             name:user.displayName!,
             email:user.email!,
             photo:user.photoURL!,
+            role:"user",
             gender,
             dob:date,
             _id:user.uid,
-            role,
             })
             if("data" in res){
                 toast.success(`Welcome, ${user.displayName}`)
