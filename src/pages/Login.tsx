@@ -34,7 +34,6 @@ function Login() {
                 const message = (error.data as MessageResponse).message;
                 toast.error(message)
             }
-            // console.log(user);
         }
         catch(err){
             toast.error("SignIn failed");
